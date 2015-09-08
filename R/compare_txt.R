@@ -9,7 +9,8 @@
 #' @return levenshtein distance
 #' @export
 #' @examples \dontrun{
-#' compare_txt(path_to_ocr="path_to_ocr_file", path_to_gold="path_to_gold_file", remove_extra_space=TRUE)
+#' compare_txt(path_to_ocr="path_to_ocr_file", path_to_gold="path_to_gold_file", 
+#' 	           remove_extra_space=TRUE)
 #' }
 
 compare_txt <- function(path_to_ocr=NULL, path_to_gold=NULL, remove_extra_space=TRUE) 

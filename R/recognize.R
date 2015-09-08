@@ -5,7 +5,7 @@
 #'
 #' @description Compare OCR documents to gold standard transcriptions. Takes two folders
 #'
-#' @importFrom RecordLinkage strcmp
+#' @importFrom RecordLinkage levenshteinDist
 #' @importFrom readr read_file
 #' @docType package
 #' @author Gaurav Sood

@@ -23,7 +23,8 @@ The function by default prints the status of the task you are trying to delete. 
 }
 \examples{
 \dontrun{
-compare_txt(path_to_ocr="path_to_ocr_file", path_to_gold="path_to_gold_file", remove_extra_space=TRUE)
+compare_txt(path_to_ocr="path_to_ocr_file", path_to_gold="path_to_gold_file",
+	           remove_extra_space=TRUE)
 }
 }
 
