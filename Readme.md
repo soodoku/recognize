@@ -1,7 +1,7 @@
 ### Recognize: Assess OCR Quality
 
 [![GPL-3.0](http://img.shields.io/:license-gpl-blue.svg)](http://opensource.org/licenses/GPL-3.0)
-[![Build Status](https://travis-ci.org/soodoku/abbyyR.svg?branch=master)](https://travis-ci.org/soodoku/recognize)
+[![Build Status](https://travis-ci.org/soodoku/recognize.svg?branch=master)](https://travis-ci.org/soodoku/recognize)
 
 ### Testing Quality
 
