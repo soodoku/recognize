@@ -1,7 +1,7 @@
-#' @title abbyyR: R Client for the Abbyy Cloud OCR
+#' @title recognize: Assess OCR quality
 #' 
-#' @name abbyyR-package
-#' @aliases abbyyR
+#' @name recognize-package
+#' @aliases recognize
 #'
 #' @description Compare OCR documents to gold standard transcriptions. Takes two folders
 #'
