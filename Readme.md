@@ -25,6 +25,7 @@ The package depends on [readr](https://github.com/hadley/readr) and [RecordLinka
 ### Usage
 
 ```{r}
+setwd(path.package("recognize"))
 compare_txt("inst/extdata/abbyyR_wisc_out/PA_Casey_Auditor_General", "inst/extdata/gold_wisc_out/PA_Casey_Auditor_General")
 ```
 
