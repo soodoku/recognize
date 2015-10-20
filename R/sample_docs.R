@@ -1,29 +1,28 @@
 #' Sample Docs
 #'
-#' Output a random sample of documents 
-#' The function by default prints the status of the task you are trying to delete. It will show up as 'deleted' if successful
-#' @param path_to_ocr path to folder containing images that are OCR'd; required
-#' @param path_to_gold path to folder containing human transcribed text; required
+#' Output a weighted random sample of documents. Documents weighted by their length.
+#'
+#' @param ocr_dir path to folder containing OCRd documents; required
+#' @param output_dir path to folder containing sampled OCRd documents; required
+#' @param nsamp number of sampled files; required
 #' 
-#' @return a vector of names of the sampled files
+#' @return a vector of names of the sampled files. It also creates a directory with sampled files
 #' @export
 #' @examples \dontrun{
-#' compare_txt(path_to_ocr="path_to_ocr_file", path_to_gold="path_to_gold_file")
+#' sample_docs(ocr_dir="path_to_ocr_dir", output_dir = "path_to_output_dir_with_sample_docs")
 #' }
 
-compare_txt <- function(path_to_ocr=NULL, path_to_gold=NULL, remove_extra_space=TRUE, normalize=TRUE) 
+sample_docs <- 
+function(ocr_dir=NULL, output_dir=NULL, nsamp=NULL) 
 {
-	ocr  <- read_file(path_to_ocr)
-	gold <- read_file(path_to_gold)
+	res <- NA
+	j <- 1
+	files <- dir(ocr_dir)
 
-	if (remove_extra_space) {
-		ocr  <- gsub("^ *|(?<= ) | *$", "", ocr, perl=T)
-		gold <- gsub("^ *|(?<= ) | *$", "", gold, perl=T)
+	samp <- samp(files, nsamp)
+
+	for(i in samp){
+		file.copy(paste0(ocr_dir, samp[i]), paste0(output_dir, samp[i]), copy.mode = TRUE, copy.date = TRUE)
 	}
-
-	levdist <- levenshteinDist(ocr, gold)
-
-	if (normalize == TRUE) levdist/nchar(gold) 
-
-	levdist
+	samp
 }

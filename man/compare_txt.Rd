@@ -14,7 +14,7 @@ compare_txt(path_to_ocr = NULL, path_to_gold = NULL,
 
 \item{remove_extra_space}{a dummy indicating whether or not extra spaces should be removed from the OCR file; default is TRUE}
 
-\item{normalize}{add a way to normalize string distance measures -- otherwise longer document means more errors, more distance}
+\item{normalize}{normalize string distance measures -- otherwise longer document means more errors, more distance}
 }
 \value{
 levenshtein distance
@@ -26,7 +26,7 @@ The function by default prints the status of the task you are trying to delete. 
 \examples{
 \dontrun{
 compare_txt(path_to_ocr="path_to_ocr_file", path_to_gold="path_to_gold_file",
-	           remove_extra_space=TRUE)
+	           remove_extra_space=TRUE, normalize=TRUE)
 }
 }
 

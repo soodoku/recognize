@@ -5,13 +5,13 @@
 #' @param path_to_ocr path to file containing OCR'd text; required
 #' @param path_to_gold path to file containing human transcribed text; required
 #' @param remove_extra_space a dummy indicating whether or not extra spaces should be removed from the OCR file; default is TRUE
-#' @param normalize add a way to normalize string distance measures -- otherwise longer document means more errors, more distance
+#' @param normalize normalize string distance measures -- otherwise longer document means more errors, more distance
 #' 
 #' @return levenshtein distance
 #' @export
 #' @examples \dontrun{
 #' compare_txt(path_to_ocr="path_to_ocr_file", path_to_gold="path_to_gold_file", 
-#' 	           remove_extra_space=TRUE)
+#' 	           remove_extra_space=TRUE, normalize=TRUE)
 #' }
 
 compare_txt <- function(path_to_ocr=NULL, path_to_gold=NULL, remove_extra_space=TRUE, normalize=TRUE) 
