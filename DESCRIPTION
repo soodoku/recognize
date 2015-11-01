@@ -1,14 +1,16 @@
 Package: recognize
-Title: Recognize: Assess OCR Quality
+Title: Assess Quality of OCR
 Version: 0.1
 Authors@R: person("Gaurav", "Sood", email = "gsood07@gmail.com", role = c("aut", "cre"))
 Maintainer: Gaurav Sood <gsood07@gmail.com>
-Description: Assess quality of OCR by comparing to human transcription.  
+Description: Assess quality of OCR by comparing to human transcription.
 URL: http://github.com/soodoku/recognize
 BugReports: http://github.com/soodoku/recognize/issues
-Depends: R (>= 3.2.0)
+Depends:
+    R (>= 3.2.0)
 License: GPL (>= 2)
 LazyData: true
-Imports: 
-		readr,
-		RecordLinkage
+Imports:
+    readr,
+    RecordLinkage
+RoxygenNote: 5.0.0
