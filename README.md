@@ -16,7 +16,7 @@ More complex formulations of this simple plan are easily apprehended. The above 
 
 To get the current development version from github:
 
-```{r install}
+```r
 # install.packages("devtools")
 devtools::install_github("soodoku/recognize")
 ```
@@ -25,12 +25,12 @@ The package depends on [readr](https://github.com/hadley/readr) and [RecordLinka
 
 ### Usage
 
-```{r}
+```r
 setwd(path.package("recognize"))
 compare_txt("inst/extdata/abbyyR_wisc_out/PA_Casey_Auditor_General", "inst/extdata/gold_wisc_out/PA_Casey_Auditor_General")
 ```
 
-```
+```r
 ## 163
 ```
 
